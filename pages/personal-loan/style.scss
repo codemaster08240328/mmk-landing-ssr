@@ -1,0 +1,129 @@
+@import '../../styles/base.scss';
+
+.pl-content {
+  padding: 140px 50px;
+  max-width: 1340px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex!important;
+
+  @include media('<tablet') {
+    padding: 28px 32px;
+    width: calc(100% - 64px);
+  }
+
+  &-text {
+    width: 50%;
+    font-family: 'HelveticaNeue';
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media('<tablet') {
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        padding: 0 18px;
+      }
+    }
+
+
+    ul {
+      margin-top: 26px;
+      
+      @include media('<tablet') {
+        padding: 0 68px;
+        text-align: left;
+        margin-top: 0px;
+
+        li {
+          margin-top: 8px!important;
+
+          p {
+            font-size: 14px;
+            line-height: 16.7px;
+          }
+
+          &::marker {
+            font-size: 8px;
+            margin-right: 4px;
+          }
+        }
+      }
+      // list-style: none;
+      li {
+        margin-top: 13px;
+        margin-left: 13px;
+        padding-left: 13px;
+
+        &::marker {
+          content: '✓';
+          margin-right: 13px; 
+        }
+      }
+
+    }
+  }
+
+  &-img-wrapper {
+    width: 50%;
+
+    @include media('<tablet') {
+      width: 100%;
+      margin-top: 32px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.pl-hiw {
+  background: linear-gradient(112.56deg, rgba(23, 131, 232, 0.0590035) 13.28%, rgba(19, 49, 226, 0.202278) 81.91%);
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media('<tablet') {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  &-steps {
+    margin-top: 88px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+
+    @include media('<tablet') {
+      flex-direction: column;
+      margin-top: 0px;
+      padding: 0 52px;
+      width: calc(100% - 104px);
+    }
+
+    &-item {
+      width: 345px;
+
+      @include media('<tablet') {
+        margin-top: 40px;
+        width: 100%;
+
+        h4 {
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

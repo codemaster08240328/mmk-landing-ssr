@@ -1,0 +1,211 @@
+@import '../styles/base.scss';
+
+.footer {
+  &-links {
+    text-transform: uppercase;
+    color: $mmk-white;
+    background-color: #4E54D0;
+    
+    &-title {
+      padding: 52px 0;
+      border: 1px solid rgba(151, 151, 151, 0.233965);
+      h4 {
+        text-align: center;
+      }
+
+      :hover {
+        cursor: pointer;
+      }
+
+      @include media('<tablet') {
+        padding: 10px 0;
+      }
+    }
+
+
+    .link-wrapper {
+      padding: 72px 82px 90px 82px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: 0 auto;
+
+      @include media('<tablet') {
+        display: block;
+        padding: 22px 8px;
+
+        & > div {
+          margin-bottom: 32px;
+        }
+
+        div:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        font-family: 'HelveticaNeue';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.0336389px;
+        color: #FFFFFF;
+        margin-bottom: 17px;
+        text-transform: none;
+        text-decoration: none;
+      }
+
+      &-tool {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+
+        @include media('<tablet') {
+          display: block;
+          a {
+            font-size: 8px;
+            line-height: 10px;
+            letter-spacing: 0.00838635px;
+          }
+        }
+      }
+
+      &-bank {
+        display: flex;
+
+        .links {
+          margin-right: 30px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+
+        @include media('<tablet') {
+          padding: 0 16px;
+        }
+      }
+
+      .link-title, .link-title-bank {
+        margin-bottom: 24px;
+        font-family: 'Avenir Next';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        /* identical to box height */
+
+        letter-spacing: 0.0378437px;
+        text-transform: uppercase;
+
+        color: #FFFFFF;
+
+        @include media('<tablet') {
+          font-size: 10px;
+          line-height: 12px;
+          // text-align: center;
+          letter-spacing: 0.0378437px;
+          padding-left: 16px;
+          margin-bottom: 12px;
+        }
+        
+      }
+      .link-title-bank {
+        text-align: center;
+        margin-right: 80px;
+
+        @include media('<tablet') {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &-content {
+    background: linear-gradient(0deg, #6FA7F9 -12.96%, #4E54D0 69.5%);
+    border: 1px solid #979797;
+
+    &-wrapper {
+      max-width: 1440px;
+      padding: 40px 82px 48px 82px;
+      margin: 0 auto;
+
+      @include media('<tablet') {
+        padding: 20px 28px;
+      }
+
+      .footer-contact {
+        color: $mmk-white;
+
+        h4 {
+          text-transform: uppercase;
+        }
+
+        p {
+          margin-top: 13px;
+          font-size: 16px!important;
+          line-height: 28px;
+          letter-spacing: 0.0336389px;
+        }
+      }
+
+      .footer-social {
+        display: flex;
+        padding: 48px 0;
+
+        @include  media('<tablet') {
+          padding: 20px 0;
+
+          img {
+            height: 20px!important;
+          }
+        }
+      }
+
+      .footer-declaimer {
+        margin-top: 18.5px;
+        
+        p {
+          color: $mmk-white;
+          font-size: 16px!important;
+          line-height: 28px;
+          letter-spacing: 0.0336389px;
+        }
+
+        .page-row {
+          width: 100%;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .p2-small {
+            @include media('<tablet') {
+              margin-right: 60px;
+            }
+          }
+
+          img {
+            height: fit-content;
+
+            @include media('<tablet') {
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-link-item {
+  @include media('<tablet') {
+    width: calc(33.333% - 32px);
+    padding: 0 16px;
+    display: inline-table;
+    margin-bottom: 8px!important;
+  }
+}

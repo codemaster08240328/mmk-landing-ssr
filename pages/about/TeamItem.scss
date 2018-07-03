@@ -1,0 +1,129 @@
+@import '../../styles/base.scss';
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+  // width: 435px;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include media('<tablet') {
+    display: none;
+  }
+
+  
+  &-img-wrapper {
+    position: relative;
+    
+    .team-profile-img {
+      width: 288px;
+      height: 288px;
+      border-radius: 50%;
+      // position: absolute;
+      top: 122px;
+      left: 85px;
+    }
+  }
+
+  &-name {
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;    
+    color: #3913B8;      
+    margin-top: 34px;  
+  }
+
+  &-mission {
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    // font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    color: rgba(11, 3, 3, 0.8);
+    margin-top: 6px;
+  }
+
+  &-social {
+   display: flex; 
+   margin-top: 6px;
+   align-items: center;
+   justify-content: center;
+   
+   a {
+     height: 30px;
+   }
+
+   img {
+     height: fit-content;
+   }
+  }
+
+  &-divider {
+    height: 1px;
+    background-color: rgba(29, 28, 28, 0.25);
+    margin-top: 10px;
+    width: 315px;
+  }
+
+  &-desc {
+    margin-top: 12.5px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: rgba(11, 3, 3, 0.8);
+    width: 315px;
+  }
+}
+
+.mobile-team-item {
+  @include media('>=tablet') {
+    display: none;
+  }
+
+  margin-bottom: 42px;
+
+  &-img {
+    width: 210px;
+    height: 210px;
+  }
+
+  &-name {
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16.48px;
+    line-height: 20px;
+
+    color: #3913B8;
+    margin-top: 25px;
+  }
+
+  &-mission {
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16.48px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    margin-top: 12px;
+  }
+
+  &-linkimg {
+    margin-top: 8px;
+  }
+
+  &-bankimg {
+    margin-top: 16px;
+  }
+}

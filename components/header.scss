@@ -1,0 +1,90 @@
+@import '../styles/base.scss';
+
+.header-nav{
+  
+  &-wrapper {
+    max-width: 1387px;
+    // height: 100px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 28px 40px 25px;
+
+    @include media('<tablet') {
+      display: none;
+    }
+  }
+
+  &-items {
+    display: flex;
+    margin-left: 15%;
+    width: 35%;
+    justify-content: space-between;
+  }
+
+  &-item {
+    @include font-frame-3();
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-action {
+    .signup-btn {
+      @include font-caption();
+      height: 48px;
+      width: 122px;
+      color: #FAFCFD;
+      text-align: center;
+      border-radius: 24px;
+      text-transform: uppercase;
+    }
+
+    .signin-btn {
+      @include font-caption();
+      height: 48px;
+      width: 122px;
+      color: #FAFCFD;
+      text-align: center;
+      border-radius: 24px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.header-menu {
+  position: relative;
+
+  
+  .header-submenu {
+    margin-top: 11px;
+    width: fit-content;
+    padding: 16px 8px;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.339188);
+    border-radius: 12px;
+
+    div {
+      white-space: nowrap;
+      padding: 8px;
+      font-family: "SF Pro Text";
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.04px;
+      color: #050505;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.logo-img {
+  &:hover {
+    cursor: pointer;
+  }
+}

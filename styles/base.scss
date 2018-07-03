@@ -1,0 +1,261 @@
+@import './colors.scss';
+@import './fonts.scss';
+@import './media.scss';
+@import './size.scss';
+@import './global.scss';
+
+$sizes: (
+  '0': 0px,
+  '5': 5px,
+  '8': 8px,
+  '10': 10px,
+  '12': 12px,
+  '15': 15px,
+  '16': 16px,
+  '18': 18px,
+  '20': 20px,
+  '24': 24px,
+  '25': 25px,
+  '30': 30px,
+  '32': 32px,
+  '36': 36px,
+  '40': 40px,
+  '80': 80px,
+  '91': 91px,
+  '98': 98px,
+);
+
+.pl {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      padding-left: $size;
+    }
+  }
+}
+
+.pr {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      padding-right: $size;
+    }
+  }
+}
+
+.pt {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      padding-top: $size;
+    }
+  }
+}
+
+.pb {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      padding-bottom: $size;
+    }
+  }
+}
+
+.ml {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      margin-left: $size;
+    }
+  }
+}
+
+.mr {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      margin-right: $size;
+    }
+  }
+}
+
+.mt {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      margin-top: $size;
+    }
+  }
+}
+
+.mb {
+  @each $name, $size in $sizes {
+    &-#{$name} {
+      margin-bottom: $size;
+    }
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.active-btn {
+  background-color: $mmk-yellow!important;
+}
+
+.mmk-btn {
+  border: none;
+  background-color: transparent;
+}
+
+h1 {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: 0.0378437px;
+
+  color: #000000;
+  margin: 0;
+
+  @include media('<tablet') {
+    font-size: 21px;
+    line-height: 25.64px
+  }
+}
+
+h2 {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.0784906px;
+  color: #010101;
+
+  margin: 0;
+
+  @include media('<tablet') {
+    font-size: 21px;
+    line-height: 26px;
+    /* identical to box height */
+    letter-spacing: 0.044151px;
+  }
+}
+
+h3 {
+  font-family: "HelveticaNeue";
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: 0.0784906px;
+  color: #010101;
+  font-weight: normal;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  letter-spacing: 0.0378437px;
+  text-transform: uppercase;
+
+  color: #30109C;
+  margin: 0;
+
+  @include media('<tablet') {
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    // letter-spacing: 0.0378437px;
+    // text-transform: uppercase;
+  }
+}
+
+p {
+  font-family: "HelveticaNeue";
+  letter-spacing: 1.75px;
+  font-size: 21px;
+  line-height: 36px;
+  color: rgba(5, 5, 5, 0.8);
+  margin: 0;
+
+  @include media('<tablet') {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-family: "HelveticaNeue";
+  font-size: 21px;
+  letter-spacing: 0.04px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.page-row {
+  display: inline-flex;
+
+  @include media('<tablet') {
+    flex-direction: column-reverse;
+  }
+}
+
+.reversed {
+  flex-direction: row-reverse;
+
+  @include media('<tablet') {
+    flex-direction: column-reverse;
+  }
+}
+
+.mobile-not-reversed {
+  @include media('<tablet') {
+    flex-direction: column!important;
+  }
+}
+
+.mprl-84 {
+  @include media('<tablet') {
+    padding: 0 84px!important;
+  }
+}
+
+.mmt {
+  @include media('<tablet') {
+    &-16 {
+      margin-top: 16px;
+    }
+
+    &-18 {
+      margin-top: 18px;
+    }
+
+    &-30 {
+      margin-top: 30px!important;
+    }
+
+    &-32 {
+      margin-top: 32px!important;
+    }
+
+    &-50 {
+      margin-top: 50px!important;
+    }
+  }
+}
+
+.mpb {
+  @include media('<tablet') {
+    &-44 {
+      padding-bottom: 44px;
+    }
+  }
+}

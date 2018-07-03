@@ -1,0 +1,65 @@
+@mixin font-frame-3() {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03px;
+  color: $mmk-white;
+}
+
+@mixin font-hero-title {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58.61px;
+  letter-spacing: 0.13px;
+
+  // color: $mmk-white;
+
+  @include media('<tablet') {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+@mixin font-hero-subtitle {
+  font-family: 'HelveticaNeue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 31px;
+  letter-spacing: 0.04px;
+
+  // color: $mmk-white;
+
+  @include media('<tablet') {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+@mixin font-caption {
+  font-family: 'HelveticaNeue';
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.03px;
+}
+
+@mixin text-title {
+  font-family: 'HelveticaNeue';
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48.84px;
+  letter-spacing: 0.04px;
+}
+
+@mixin text-description {
+  font-family: 'HelveticaNeue';
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 36px;
+  letter-spacing: 0.04px;
+}

@@ -1,0 +1,108 @@
+@import '../styles/base.scss';
+
+.faq-wrapper {
+  background: #4E54D0;
+  text-align: center;
+  color: $mmk-white;
+
+  padding: 112px 0;
+
+  @include media('<tablet') {
+    padding: 40px 32px;
+  }
+
+  h1 {
+    margin-bottom: 56px;
+
+    @include media('<tablet') {
+      margin-bottom: 32px;
+    }
+  }
+
+  .qa-card-wrapper {
+    background: rgba(216, 216, 216, 0.179168);
+    border-radius: 9px;
+    padding: 29px 35px;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-top: 24px;
+    text-align: left;
+
+    @include media('<tablet') {
+      margin-top: 12px;
+      padding: 28px 16px;
+    }
+
+    .question-wrapper {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'HelveticaNeue';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 21px;
+      line-height: 26px;
+      letter-spacing: 0.044151px;
+      align-items: center;
+
+      @include media('<tablet') {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.0515094px;
+
+       
+        span:first-child {
+          margin-right: 24px;
+        }
+
+      }
+      
+      .question-plus-icon:hover {
+        cursor: pointer;
+      }
+    }
+    .answer-wrapper {
+      margin-top: 20px;
+      font-family: 'HelveticaNeue';
+      font-style: normal;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.044151px;
+
+      @include media('<tablet') {
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      ul {
+        margin-left: 20px;
+        li {
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 0.044151px;
+          margin-top: 20px;
+
+          @include media('<tablet') {
+            font-size: 10px;
+            line-height: 14px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .view-more-btn {
+    border: 1px solid #FFFFFF;
+    border-radius: 26.5px;
+    background-color: transparent;
+    color: $mmk-white;
+    padding: 15px 70px;
+    margin-top: 68px;
+    font-family: 'HelveticaNeue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.0441509px;
+  }
+}
